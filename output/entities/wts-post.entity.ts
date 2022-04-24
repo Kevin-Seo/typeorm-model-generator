@@ -22,7 +22,7 @@ export class WtsPost {
   createdAt: Date;
 
   @Column("timestamp without time zone", { name: "updated_at", nullable: true })
-  updatedAt: Date | null;
+  updatedAt?: Date | null;
 
   @Column("text", { name: "seller_id" })
   sellerId: string;
@@ -31,7 +31,7 @@ export class WtsPost {
   sellerManner: number;
 
   @Column("text", { name: "buyer_id", nullable: true })
-  buyerId: string | null;
+  buyerId?: string | null;
 
   @Column("double precision", { name: "buyer_manner", precision: 53 })
   buyerManner: number;

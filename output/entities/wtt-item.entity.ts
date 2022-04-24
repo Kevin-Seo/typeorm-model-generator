@@ -112,58 +112,58 @@ export class WttItem {
   reqLvl: number;
 
   @Column("smallint", { name: "def_min", nullable: true })
-  defMin: number | null;
+  defMin?: number | null;
 
   @Column("smallint", { name: "def_max", nullable: true })
-  defMax: number | null;
+  defMax?: number | null;
 
   @Column("smallint", { name: "oneh_min", nullable: true })
-  onehMin: number | null;
+  onehMin?: number | null;
 
   @Column("smallint", { name: "oneh_max", nullable: true })
-  onehMax: number | null;
+  onehMax?: number | null;
 
   @Column("smallint", { name: "twoh_min", nullable: true })
-  twohMin: number | null;
+  twohMin?: number | null;
 
   @Column("smallint", { name: "twoh_max", nullable: true })
-  twohMax: number | null;
+  twohMax?: number | null;
 
   @Column("smallint", { name: "throw_min", nullable: true })
-  throwMin: number | null;
+  throwMin?: number | null;
 
   @Column("smallint", { name: "throw_max", nullable: true })
-  throwMax: number | null;
+  throwMax?: number | null;
 
   @Column("smallint", { name: "pal_smite_min", nullable: true })
-  palSmiteMin: number | null;
+  palSmiteMin?: number | null;
 
   @Column("smallint", { name: "pal_smite_max", nullable: true })
-  palSmiteMax: number | null;
+  palSmiteMax?: number | null;
 
   @Column("smallint", { name: "ass_kick_min", nullable: true })
-  assKickMin: number | null;
+  assKickMin?: number | null;
 
   @Column("smallint", { name: "ass_kick_max", nullable: true })
-  assKickMax: number | null;
+  assKickMax?: number | null;
 
   @Column("smallint", { name: "attack_speed", nullable: true })
-  attackSpeed: number | null;
+  attackSpeed?: number | null;
 
   @Column("smallint", { name: "attack_range", nullable: true })
-  attackRange: number | null;
+  attackRange?: number | null;
 
   @Column("smallint", { name: "block_rate", nullable: true })
-  blockRate: number | null;
+  blockRate?: number | null;
 
   @Column("smallint", { name: "durability", nullable: true })
-  durability: number | null;
+  durability?: number | null;
 
   @Column("smallint", { name: "stack", nullable: true })
-  stack: number | null;
+  stack?: number | null;
 
   @Column("smallint", { name: "belt_box", nullable: true })
-  beltBox: number | null;
+  beltBox?: number | null;
 
   @Column("smallint", { name: "socket_max" })
   socketMax: number;
@@ -172,10 +172,10 @@ export class WttItem {
   socket: number;
 
   @Column("smallint", { name: "quality_lvl", nullable: true })
-  qualityLvl: number | null;
+  qualityLvl?: number | null;
 
   @Column("smallint", { name: "treasure_class", nullable: true })
-  treasureClass: number | null;
+  treasureClass?: number | null;
 
   @Column("text", { name: "patch" })
   patch: string;
@@ -204,19 +204,19 @@ export class WttItem {
     | "Sorceress";
 
   @Column("text", { name: "base_group", nullable: true })
-  baseGroup: string | null;
+  baseGroup?: string | null;
 
   @Column("text", { name: "set_group", nullable: true })
-  setGroup: string | null;
+  setGroup?: string | null;
 
   @Column("smallint", { name: "rune_order", nullable: true })
-  runeOrder: number | null;
+  runeOrder?: number | null;
 
   @Column("text", { name: "gem_type", nullable: true })
-  gemType: string | null;
+  gemType?: string | null;
 
   @Column("text", { name: "gem_grade", nullable: true })
-  gemGrade: string | null;
+  gemGrade?: string | null;
 
   @ManyToOne(() => WtsPost, (wtsPost) => wtsPost.wttItems, {
     onDelete: "CASCADE",

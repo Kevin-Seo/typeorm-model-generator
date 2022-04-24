@@ -14,7 +14,7 @@ export class User {
   createdAt: Date;
 
   @Column("timestamp without time zone", { name: "updated_at", nullable: true })
-  updatedAt: Date | null;
+  updatedAt?: Date | null;
 
   @Column("text", { name: "bnet_id" })
   bnetId: string;
