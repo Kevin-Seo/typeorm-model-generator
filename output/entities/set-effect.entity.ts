@@ -18,11 +18,11 @@ export class SetEffect {
   @Column("integer", { name: "d2item_id" })
   d2itemId: number;
 
-  @Column("smallint", { name: "req_count" })
-  reqCount: number;
+  @Column("smallint", { name: "req_count", nullable: true })
+  reqCount?: number | null;
 
-  @Column("text", { name: "req_with" })
-  reqWith: string;
+  @Column("text", { name: "req_with", nullable: true })
+  reqWith?: string | null;
 
   @Column("text", { name: "patch" })
   patch: string;

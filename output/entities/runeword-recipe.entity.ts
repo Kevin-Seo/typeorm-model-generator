@@ -8,14 +8,14 @@ import {
 } from "typeorm";
 import { RunewordEffect } from "./runeword-effect";
 
-@Index("pk_runewordrecipe_id", ["id", "runewordEffectId"], { unique: true })
+@Index("pk_runewordrecipe_id", ["id"], { unique: true })
 @Index("fk_runewordrecipe_runewordeffectid", ["runewordEffectId"], {})
 @Entity("runeword_recipe", { schema: "public" })
 export class RunewordRecipe {
   @PrimaryGeneratedColumn({ type: "integer", name: "id" })
   id: number;
 
-  @Column("integer", { primary: true, name: "runeword_effect_id" })
+  @Column("integer", { name: "runeword_effect_id" })
   runewordEffectId: number;
 
   @Column("text", { name: "rune_name" })

@@ -25,6 +25,12 @@ export class AffixOptionGroup {
   @Column("integer", { name: "affix_possible_type_id" })
   affixPossibleTypeId: number;
 
+  @Column("boolean", { name: "option_variable" })
+  optionVariable: boolean;
+
+  @Column("boolean", { name: "option_visible" })
+  optionVisible: boolean;
+
   @Column("smallint", { name: "item_lvl_min" })
   itemLvlMin: number;
 

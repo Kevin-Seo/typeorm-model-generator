@@ -1,0 +1,5 @@
+{
+  "convertCaseFile": "param",
+  "convertCaseEntity": "pascal",
+  "convertCaseProperty": "camel"
+}
