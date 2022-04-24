@@ -40,7 +40,7 @@ export class OptionGroup {
     nullable: true,
     enum: ["None", "Weapon", "Helm", "BodyArmor", "Sheild"],
   })
-  socketPart: "None" | "Weapon" | "Helm" | "BodyArmor" | "Sheild" | null;
+  socketPart?: "None" | "Weapon" | "Helm" | "BodyArmor" | "Sheild" | null;
 
   @ManyToOne(() => Option, (option) => option.optionGroups, {
     onDelete: "CASCADE",

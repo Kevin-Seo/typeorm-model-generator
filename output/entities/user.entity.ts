@@ -27,13 +27,13 @@ export class User {
     nullable: true,
     precision: 53,
   })
-  mannerPoint: number | null;
+  mannerPoint?: number | null;
 
   @Column("timestamp without time zone", {
     name: "manner_updated_at",
     nullable: true,
   })
-  mannerUpdatedAt: Date | null;
+  mannerUpdatedAt?: Date | null;
 
   @OneToMany(() => WishList, (wishList) => wishList.user)
   wishLists: WishList[];
