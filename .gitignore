@@ -4,7 +4,6 @@ ormconfig.json
 .vscode
 .idea
 typings/
-output/**/*.*
 .nyc_output/
 coverage/
 .env

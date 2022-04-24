@@ -69,6 +69,9 @@ function generateModels(
             case "pascal":
                 casedFileName = changeCase.pascalCase(element.fileName);
                 break;
+            case "snake":
+                casedFileName = changeCase.snakeCase(element.fileName);
+                break;
             case "none":
                 casedFileName = element.fileName;
                 break;
@@ -77,7 +80,7 @@ function generateModels(
         }
         const resultFilePath = path.resolve(
             entitiesPath,
-            `${casedFileName}.ts`
+            `${casedFileName}.entity.ts`
         );
         const rendered = entityCompliedTemplate(element);
         const withImportStatements = removeUnusedImports(
@@ -128,6 +131,9 @@ function createIndexFile(
             break;
         case "pascal":
             fileName = changeCase.pascalCase(fileName);
+            break;
+        case "snake":
+            fileName = changeCase.snakeCase(fileName);
             break;
         default:
     }
@@ -190,6 +196,9 @@ function createHandlebarsHelpers(generationOptions: IGenerationOptions): void {
             case "pascal":
                 retStr = changeCase.pascalCase(str);
                 break;
+            case "snake":
+                retStr = changeCase.snakeCase(str);
+                break;
             case "none":
                 retStr = str;
                 break;
@@ -214,9 +223,6 @@ function createHandlebarsHelpers(generationOptions: IGenerationOptions): void {
                 break;
             case "none":
                 retStr = str;
-                break;
-            case "snake":
-                retStr = changeCase.snakeCase(str);
                 break;
             default:
                 throw new Error("Unknown case style");
